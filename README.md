@@ -4,6 +4,7 @@
 - desktop first
 - react
 - contextAPI
+- localStorage
 - sass
 - bem
 - itcss
