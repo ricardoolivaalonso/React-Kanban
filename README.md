@@ -3,6 +3,7 @@
 - responsive design
 - desktop first
 - react
+- contextAPI
 - sass
 - bem
 - itcss
