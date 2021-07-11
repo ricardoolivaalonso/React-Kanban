@@ -1,0 +1,66 @@
+.task{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	width: 100%;
+	padding: var(--grid-gap);
+	border-radius: calc(var(--radius)/2);
+	animation: task 750ms linear ;
+
+	&__empty,
+	&__name{
+		font-family: 'Roboto', sans-serif;
+		font-size: 14px;
+		line-height: 1.5;
+		letter-spacing: .15px;
+		word-break: break-all;
+		color: rgba($black, .75);
+		
+		&::first-letter{ text-transform: capitalize; }
+	}
+	&__empty{ color: rgba($black, .5); }
+	&__info{
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 30px;
+	}
+		&__timestamp{
+			font-size: 10px;
+			font-weight: 500;
+			letter-spacing: .15px;
+			color: rgba($black, .8);
+		}
+		&__buttons{
+			display: grid;
+			grid-auto-flow: column;
+			grid-column-gap: 5px;
+		}
+			&__button{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				width: 20px;
+				height: 20px;
+
+				border-radius: 50%;
+				background-color: $black;
+				color: $white;
+				cursor: pointer;
+				transition: 100ms;
+
+				&:hover{
+					background-color: darken($black, 20);
+					transition: 100ms;
+				}
+			}
+			&--todo{background-color: $orange; }
+			&--doing{background-color: $blue; }
+			&--done{background-color: $green; }
+}
+
+
+
